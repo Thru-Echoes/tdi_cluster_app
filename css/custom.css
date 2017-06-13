@@ -97,6 +97,10 @@ body {
 ******************** SLIDERS *********************
 *************************************************/
 
+#histSlider .slider-selection {
+    background: #BABABA;
+}
+
 #roadSlider .slider-selection {
     background: #BABABA;
 }

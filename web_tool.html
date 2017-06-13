@@ -22,12 +22,13 @@
     <script src="js/jquery-2.2.3.js"></script>
     <!--script src="js/bootstrap.min.js"></script-->
     <script src="js/bootstrap.js"></script>
-    <!-- Bootstrap Slider (3rd party) -->
-    <script src="js/bootstrap-slider.js"></script>
     <!-- Bootstrap Table (3rd party) -->
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.css">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/locale/bootstrap-table-en-US.min.js"></script>
+    <!-- Bootstrap Slider (3rd party) -->
+    <link href="css/slider.css"></link>
+    <script src="js/bootstrap-slider.js"></script>
 </head>
 <body>
 
@@ -79,11 +80,6 @@
                         <br>
                         <p style="text-align: center;">Enter metrics for a new park or an existing park that is changing. After entering values, click the <i>predict crime profile</i> button to see the likelihood that this new or changed park will belong to each of the seven Crime Profile clusters. The crime profile clusters of the 30 PWR park units are shown below for comparison.</p>
                         <br>
-                        <!--p class="blockText">Here is a picture:</p>
-                        <br>
-                        <div class="modelWrapper">
-                            <img src="img/grand.jpg" alt="This is the Grand!">
-                        </div-->
                     </div>
                     <div class="col-md-2"></div>
                 </div>
@@ -98,17 +94,18 @@
                         <li><i>Rangers<sup>&dagger;</sup> (<b>number</b>)</i></li>
                         <li><i>Seasonal Rangers<sup>&dagger;</sup> (<b>number</b>)</i></li>
                         <li><i>Historic Grows (<b>yes</b> or <b>no</b>)</i></li>
-                        <li><i>Density of Roads (<b>Low, Medium,</b> or <b>High</b>)</i></li>
-                        <li><i>Density of Trails (<b>Low, Medium,</b> or <b>High</b>)</i></li>
+                        <li><i>Density of Roads<sup><b>#</b></sup> (<b>Low, Medium,</b> or <b>High</b>)</i></li>
+                        <li><i>Density of Trails<sup><b>#</b></sup> (<b>Low, Medium,</b> or <b>High</b>)</i></li>
                         <br>
                         <p><sup>&dagger;</sup> <i>Rangers and seasonal rangers should each be the number at peak season</i></p>
+                        <br>
+                        <p><sup><b>#</b></sup> <i>Average density of roads and trails each should either be <u>Low, Medium, or High</u><i>. <a href="./roads_trails.html">See real examples here.</a></p>
                         <br>
                         <form class="navbar-form navbar-left" role="search">
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Number of Rangers" id="showRangers">
                                 <input type="text" class="form-control" placeholder="Number of Seasonals" id="showSeasonals">
                                 <input type="text" class="form-control" placeholder="Historic Grows" id="showGrows">
-                                <br>
                                 <input type="text" class="form-control" placeholder="Density Roads" id="showRoads">
                                 <input type="text" class="form-control" placeholder="Density Trails" id="showTrails">
                             </div>
@@ -116,6 +113,31 @@
                         <button id="showPredict" class="btn btn-danger danger-specialL">Predict Crime Profile</button>
                         <br>
                         <div class="row">
+                            <div class="col-md-12">
+                                <br>
+                                <div class="well">
+                                    <div class="slider slider-horizontal" style="width: 140px;">
+                                        <div class="slider-track">
+                                            <div class="slider-selection" style="left: 0%; width: 100%;"></div>
+                                            <div class="slider-handle round" style="left: 100%;"></div>
+                                            <div class="slider-handle round hide" style="left: 0%;"></div>
+                                        </div>
+                                        <div class="tooltip top in" style="top: -41px; left: 90px;">
+                                            <div class="tooltip-arrow"></div>
+                                            <div class="tooltip-inner">Current value: 10</div>
+                                        </div>
+                                        <input type="text" class="span2" value="4" id="slider-1">
+                                    </div>
+                                </div>
+                                <!--input id="histSlider" type="text" data-provide="slider"
+                                    data-slider-ticks="[1,2,3]" data-slider-ticks-labels='["Low", "Medium", "High"]' data-slider-min="1" data-slider-max="3"
+                                    data-slider-step="1" data-slider-value="2" data-slider-tooltip="hide" />
+                                <br-->
+                                <!--input id="roadSlider" data-slider-id='roadSlider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+                                <br>
+                                <input id="trailSlider" data-slider-id='trailSlider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+                                <br-->
+                            </div>
                             <div style="height: 100px;"></div>
                         </div>
                         <br>
@@ -202,7 +224,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid background-gray">
+    <div class="container-fluid background-crime">
         <div class="row">
             <div class="container">
                 <div class="row">
@@ -355,7 +377,7 @@
                 </div>
             </div>
         </div>
-        <div id="push" style="height: 120px"></div>
+        <div style="height: 120px"></div>
     </div>
 
     <!-- FOOTER -->
@@ -370,17 +392,7 @@
 <script src="js/prob_predictor.js"></script>
 <script src="js/crime_data.js"></script>
 <script>
-$(function() {
-    $("#csv-table").bootstrapTable({
-        data: cluster_data
-    });
-});
-
-var checkProfile = 0;
-
-setPredictor;
-
-// location.href='crime1.html'
+/* Declare functions at top-level */
 
 function setHref() {
 
@@ -389,8 +401,6 @@ function setHref() {
 
     window.location = nextHref;
     return TRUE;
-
-
 }
 
 function downloadCSV() {
@@ -398,6 +408,42 @@ function downloadCSV() {
     window.open('csv/crime_data.csv');
     return TRUE;
 }
+
+/* Next, declare and execute non-function javascript */
+$(function() {
+    $("#csv-table").bootstrapTable({
+        data: cluster_data
+    });
+});
+
+$('#slider-1').slider({
+    formatter: function(value) {
+        return 'Current value: ' + value;
+    }
+});
+
+/*$('#histSlider').slider({
+    formatter: function(value) {
+        return 'Current value: ' + value;
+    }
+});
+
+$('#roadSlider').slider({
+    formatter: function(value) {
+        return 'Current value2: ' + value;
+    }
+});
+
+$('#trailSlider').slider({
+    formatter: function(value) {
+        return 'Current value3: ' + value;
+    }
+});*/
+
+var checkProfile = 0;
+
+setPredictor;
+
 </script>
 </body>
 </html>
