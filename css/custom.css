@@ -1,0 +1,359 @@
+/*.container {
+    margin-left: 20px;
+    margin-right: 20px;
+}*/
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.navbar-form {
+    margin-left: -15px;
+    padding-bottom: 4px;
+}
+
+#showFinal {
+    padding: 12px 15px;
+    font-size: 20px;
+}
+
+#large-input {
+    font-size: 26px;
+    width: 80%;
+    height: 100px;
+    border: 5px solid #ccc;
+    border-radius: 20px;
+}
+
+.vsm-split {
+    height: 30px;
+}
+
+.sm-split {
+    height: 75px;
+}
+
+.med-split {
+    height: 150px;
+}
+
+.lg-split {
+    height: 200px;
+}
+
+.density-pdf {
+    /*height: 595px;
+    width: 420px;*/
+    height: 540px;
+    width: 380px;
+}
+
+/*************************************************
+****************** TYPE BOXES ********************
+*************************************************/
+
+.boxUpper {
+    height: 300px;
+}
+
+.boxLower {
+    height: 280px;
+}
+
+#boxType1 {
+    background-color: rgba(105, 105, 105, 0.4);
+}
+
+#boxType2 {
+    background-color: rgba(220, 20, 60, 0.7);
+}
+
+#boxType3 {
+    background-color: rgba(34, 139, 34, 0.5);
+}
+
+#boxType4 {
+    background-color: rgba(0, 0, 255, 0.4);
+}
+
+#boxType5 {
+    background-color: rgba(0, 255, 255, 0.5);
+}
+
+#boxType6 {
+    background-color: rgba(255, 0, 255, 0.4)
+}
+
+#boxType7 {
+    background-color: rgba(255, 215, 0, 0.5);
+}
+
+/*************************************************
+******************** SLIDERS *********************
+*************************************************/
+
+#roadSlider .slider-selection {
+    background: #BABABA;
+}
+
+#trailSlider .slider-selection {
+    background: #BABABA;
+}
+
+/*************************************************
+********************* INDEX **********************
+*************************************************/
+
+.overview-text {
+    background-color: rgba(238, 238, 238, 0.4);
+}
+
+.background-gray {
+    background-color: rgba(238, 238, 238, 0.4);
+}
+
+.background-vgray {
+    background-color: rgba(238, 238, 238, 0.9);
+}
+
+.background-white {
+
+}
+
+.background-special1 {
+    background-color: rgba(45, 96, 111, 0.99);
+}
+
+.background-special2 {
+    /*background-color: rgba(91, 192, 222, 0.5);*/
+    background-color: rgba(78, 145, 240, 0.99);
+}
+
+.background-crime {
+    background-color: rgba(78, 145, 240, 0.1);
+}
+
+.header-L {
+    text-align: left;
+}
+
+.header-R {
+    text-align: right;
+}
+
+.header-color {
+    /*font-size: 220%;*/
+    color: rgba(205, 251, 232, 0.95);
+    line-height: 1.5;
+}
+
+.special-a {
+    /*color: rgba(78, 145, 240, 0.99);*/
+    text-decoration: none;
+    background-color: rgba(205, 251, 232, 0.95);
+}
+
+.link-L {
+    color: rgba(78, 145, 240, 0.99);
+}
+
+.link-R {
+    color: rgba(45, 96, 111, 0.99);
+}
+
+/*************************************************
+***************** MODEL WRAPPER ******************
+*************************************************/
+
+.modelContainer {
+    width: 100%;
+}
+
+.modelWrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    /*padding-top: 25px;*/
+    /*padding-bottom: 70%;*/
+    /*padding-top: 300px;*/
+    height: 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.modelWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+}
+
+/*************************************************
+********************* BODY ***********************
+*************************************************/
+
+body {
+    /*background: url('img/sample_img.jpg') no-repeat center center fixed;*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/*.jumbotron {
+    background-image: url("../sample_img.jpg");
+    background-size: cover;
+    height: 100%;
+}
+*/
+
+.jumbotron {
+    background-color: rgba(255, 0, 0, 0.0);
+    padding: 0px;
+    maring-bottom: 0px;
+    text-align: center;
+}
+
+/*body {
+	background-image: url('../mnt.jpg');
+  background-repeat: no-repeat;
+	position: bottom;
+}*/
+
+/*************************************************
+******************* NAVIGATION *******************
+*************************************************/
+
+.navbar-default {
+    background-color: rgba(78, 140, 240, 0.2);
+    border-color: rgba(45, 96, 111, 0.8);
+}
+
+.navbar-default .navbar-brand {
+    color: rgba(45, 96, 111, 0.9);
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: rgba(45, 96, 111, 0.9);
+}
+
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: rgba(78, 145, 240, 0.75);
+    outline: 0;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #555;
+    /*background-color: #e7e7e7;*/
+    background-color: rgba(205, 251, 232, 0.95);
+}
+
+/*************************************************
+******************** BUTTONS *********************
+*************************************************/
+
+.btn-info {
+    /*color: #fff;*/
+    color: rgba(0, 0, 0, 0.8);
+    /*background-color: #5bc0de;*/
+    background-color: rgba(184, 228, 241, 0.7);
+    /*border-color: #46b8da;*/
+    border-color: rgba(27, 72, 85, 0.7);
+}
+
+.danger-specialL {
+    background-color: rgba(78, 240, 173, 0.95);
+    border-color: rgba(78, 140, 240, 0.95);
+}
+
+.danger-specialR {
+    background-color: rgba(78, 140, 240, 0.75);
+    border-color: rgba(78, 240, 173, 0.95);
+}
+
+/*************************************************
+****************** CONTACT FORM ******************
+*************************************************/
+
+.form-group {
+	/* padding-right: 100px; */
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    background-color: rgba(78, 140, 240, 0.75);
+    border-color: rgba(78, 240, 173, 0.95);
+}
+
+/*************************************************
+******************** JUMBOTRON *******************
+*************************************************/
+
+body {
+	padding-top: 50px;
+}
+
+p {
+	/*font-family: 'Exo', sans-serif;*/
+}
+
+/*************************************************
+******************** CAROUSEL ********************
+*************************************************/
+
+.carousel-black {
+	text-shadow: 1px 0 0 #000, 0 1px 0 #000;
+}
+
+/* thumbnails */
+
+.allThumbs {
+	padding-top: 30px;
+}
+
+.home-thumb img:hover {
+	transform: scale(1.2);
+}
+
+.thumbnail img {
+	transition: all 0.3s ease 0s;
+	width: 100%;
+}
+
+.thumbnail {
+	overflow: hidden;
+}
+
+.bg-grey {
+	background-color: #f9f9f9;
+}
+
+/*************************************************
+********************* FOOTER *********************
+*************************************************/
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+}
+
+.footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.container .footer-text {
+    margin: 20px 0;
+}
+
+.footer-text {
+    color: #9d9d9d;
+}
