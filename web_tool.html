@@ -444,14 +444,18 @@ function setHref() {
     var hrefFillers = ["crime1.html", "crime2.html", "crime3.html", "crime4.html", "crime5.html", "crime6.html", "crime7.html"];
     var nextHref = hrefFillers[checkProfile];
 
-    window.location = nextHref;
-    return TRUE;
+    //window.location = nextHref;
+    //return true;
+
+    /* Open new window instead */
+    //window.open(nextHref);
+    var new_window = window.open(nextHref, nextHref, "width=1000, height=800");
 }
 
 function downloadCSV() {
 
     window.open('csv/crime_data.csv');
-    return TRUE;
+    return true;
 }
 
 /* Next, declare and execute non-function javascript */
