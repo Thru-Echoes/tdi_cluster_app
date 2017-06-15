@@ -84,7 +84,7 @@
                     <div class="col-md-2"></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4 well">
                         <h4 style="text-align: center;">Enter new park metrics: </h4>
                         <br>
                         <p style="text-align: center;">Enter in metrics for a new park or what an existing park's metrics will be changed to. For this prototype we allow the following metrics to be entered:</p>
@@ -103,34 +103,34 @@
                                 <input type="text" class="form-control" placeholder="Density Trails" id="showTrails"-->
                                 <h4>Historic Grows</h4>
                                 <label class="radio-inline">
-                                    <input type="radio" name="hist-radio">Yes
+                                    <input type="radio" name="hist-radio" id="hist-yes">Yes
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="hist-radio">No
+                                    <input type="radio" name="hist-radio" id="hist-no">No
                                 </label>
                                 <div style="height: 12px;"></div>
 
                                 <h4>Density of Roads<sup>&Dagger;</sup></h4>
                                 <label class="radio-inline">
-                                    <input type="radio" name="road-radio">Low
+                                    <input type="radio" name="road-radio" id="road-low">Low
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="road-radio">Medium
+                                    <input type="radio" name="road-radio" id="road-med">Medium
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="road-radio">High
+                                    <input type="radio" name="road-radio" id="road-hi">High
                                 </label>
                                 <div style="height: 12px;"></div>
 
                                 <h4>Density of Trails<sup>&Dagger;</sup></h4>
                                 <label class="radio-inline">
-                                    <input type="radio" name="trail-radio">Low
+                                    <input type="radio" name="trail-radio" id="trail-low">Low
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="trail-radio">Medium
+                                    <input type="radio" name="trail-radio" id="trail-med">Medium
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="trail-radio">High
+                                    <input type="radio" name="trail-radio" id="trail-hi">High
                                 </label>
                                 <div style="height: 20px;"></div>
                             </div>
@@ -140,7 +140,7 @@
                         <br>
                         <p><sup>&Dagger;</sup> <i>Average density of roads and trails each should either be <u>Low, Medium, or High</u><i>. <a href="./roads_trails.html">See real examples here.</a></p>
                         <br>
-                        <button id="showPredict" class="btn btn-danger danger-specialL">Predict Crime Profile</button>
+                        <button id="showPredict" class="btn btn-danger danger-specialL"><h4 style="text-align: center;">Predict Crime Profile</h4></button>
                         <br>
                         <div class="row">
                             <div class="col-md-12">
@@ -168,12 +168,11 @@
                                 <input id="trailSlider" data-slider-id='trailSlider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
                                 <br-->
                             </div>
-                            <div style="height: 100px;"></div>
+                            <div style="height: 20px;"></div>
                         </div>
-                        <br>
                     </div>
                     <div class="col-md-8">
-                        <h4 style="text-align: center;">Predicted Crime Profile: </h4>
+                        <h4 style="text-align: center;">Predicted Likelihood of Crime Profile (<b>%</b>): </h4>
                         <br>
                         <div class="row">
                             <div class="col-md-6">
@@ -245,10 +244,15 @@
                                 <br>
                                 <input type="text" class="form-control" id="large-input" name="hold_assign" placeholder="Crime profile assignment">
                                 <br>
-                                <button class="btn btn-danger danger-specialR" id="large-input-btn" onclick="setHref();">Placeholder btn</button>
+                                <button class="btn btn-danger danger-specialR" id="large-input-btn" onclick="setHref();"><h4 style="text-align: center;">Placeholder btn</h4></button>
                             </div>
                             <div class="col-md-2"></div>
                         </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div style="height: 40px;"></div>
                     </div>
                 </div>
             </div>
@@ -261,7 +265,14 @@
                     <div class="col-md-12">
                         <div class="med-split"></div>
                         <h1 style="text-align: center;">Explore Park Metrics:</i></h1>
-                        <div style="height: 25px"></div>
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <h3 style="text-align: center;"><small><b>The total number of rangers is calculated by adding the number of rangers and the number of seasonal rangers at peak season. Thus, total number of rangers = number of ranges + number of seasonal rangers. For example, if a park has 5 rangers and 2 seasonal rangers, 7 total number of rangers would be shown in the table below.</b></small></h3>
+                                <div style="height: 30px;"></div>
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
                         <div class="row">
                             <div class="col-md-3"></div>
                             <div class="col-md-3">
@@ -283,7 +294,7 @@
                                     <tr class="click-row" data-href="/">
                                         <th data-field="cluster" data-sortable="true">Cluster</th>
                                         <th data-field="park" data-sortable="true">Park</th>
-                                        <th data-field="rangers" data-sortable="true">Number of Rangers</th>
+                                        <th data-field="rangers" data-sortable="true">Total Number of Rangers</th>
                                         <th data-field="histgrows" data-sortable="true">Historic Grows</th>
                                         <th data-field="maxdens_roads" data-sortable="true">Density of Roads</th>
                                         <th data-field="maxdens_trails" data-sortable="true">Density of Trails</th>
@@ -420,6 +431,7 @@
 <!-- Bootstrap core JavaScript -->
 <!-- placed at end so pages load faster -->
 <script src="js/prob_predictor.js"></script>
+<!--script src="js/foo_predictor.js"></script-->
 <script src="js/crime_data.js"></script>
 <script>
 /* Declare functions at top-level */
