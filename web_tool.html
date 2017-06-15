@@ -88,33 +88,63 @@
                         <h4 style="text-align: center;">Enter new park metrics: </h4>
                         <br>
                         <p style="text-align: center;">Enter in metrics for a new park or what an existing park's metrics will be changed to. For this prototype we allow the following metrics to be entered:</p>
-                        <br>
-                        <p style="text-align: center;"><strong>Note: number of rangers and seasonal rangers should each be a number at peak season.</strong> Use <strong>0</strong> if the parameter does not apply to your park.</p>
-                        <br>
-                        <li><i>Rangers<sup>&dagger;</sup> (<b>number</b>)</i></li>
-                        <li><i>Seasonal Rangers<sup>&dagger;</sup> (<b>number</b>)</i></li>
-                        <li><i>Historic Grows (<b>yes</b> or <b>no</b>)</i></li>
-                        <li><i>Density of Roads<sup><b>#</b></sup> (<b>Low, Medium,</b> or <b>High</b>)</i></li>
-                        <li><i>Density of Trails<sup><b>#</b></sup> (<b>Low, Medium,</b> or <b>High</b>)</i></li>
+                        <div style="height: 20px;"></div>
+                        <form class="navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                                <h4>Rangers<sup>&dagger;</sup> <small>(<b>number</b>)</small></h4>
+                                <input type="text" class="form-control" placeholder="Number of Rangers" id="showRangers">
+                                <div style="height: 12px;"></div>
+
+                                <h4>Seasonal Rangers<sup>&dagger;</sup> <small>(<b>number</b>)</small></h4>
+                                <input type="text" class="form-control" placeholder="Number of Seasonals" id="showSeasonals">
+                                <div style="height: 12px;"></div>
+                                <!--input type="text" class="form-control" placeholder="Historic Grows" id="showGrows">
+                                <input type="text" class="form-control" placeholder="Density Roads" id="showRoads">
+                                <input type="text" class="form-control" placeholder="Density Trails" id="showTrails"-->
+                                <h4>Historic Grows</h4>
+                                <label class="radio-inline">
+                                    <input type="radio" name="hist-radio">Yes
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="hist-radio">No
+                                </label>
+                                <div style="height: 12px;"></div>
+
+                                <h4>Density of Roads<sup>&Dagger;</sup></h4>
+                                <label class="radio-inline">
+                                    <input type="radio" name="road-radio">Low
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="road-radio">Medium
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="road-radio">High
+                                </label>
+                                <div style="height: 12px;"></div>
+
+                                <h4>Density of Trails<sup>&Dagger;</sup></h4>
+                                <label class="radio-inline">
+                                    <input type="radio" name="trail-radio">Low
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="trail-radio">Medium
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="trail-radio">High
+                                </label>
+                                <div style="height: 20px;"></div>
+                            </div>
+                        </form>
                         <br>
                         <p><sup>&dagger;</sup> <i>Rangers and seasonal rangers should each be the number at peak season</i></p>
                         <br>
-                        <p><sup><b>#</b></sup> <i>Average density of roads and trails each should either be <u>Low, Medium, or High</u><i>. <a href="./roads_trails.html">See real examples here.</a></p>
+                        <p><sup>&Dagger;</sup> <i>Average density of roads and trails each should either be <u>Low, Medium, or High</u><i>. <a href="./roads_trails.html">See real examples here.</a></p>
                         <br>
-                        <form class="navbar-form navbar-left" role="search">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Number of Rangers" id="showRangers">
-                                <input type="text" class="form-control" placeholder="Number of Seasonals" id="showSeasonals">
-                                <input type="text" class="form-control" placeholder="Historic Grows" id="showGrows">
-                                <input type="text" class="form-control" placeholder="Density Roads" id="showRoads">
-                                <input type="text" class="form-control" placeholder="Density Trails" id="showTrails">
-                            </div>
-                        </form>
                         <button id="showPredict" class="btn btn-danger danger-specialL">Predict Crime Profile</button>
                         <br>
                         <div class="row">
                             <div class="col-md-12">
-                                <br>
+                                <!--br>
                                 <div class="well">
                                     <div class="slider slider-horizontal" style="width: 140px;">
                                         <div class="slider-track">
@@ -128,7 +158,7 @@
                                         </div>
                                         <input type="text" class="span2" value="4" id="slider-1">
                                     </div>
-                                </div>
+                                </div-->
                                 <!--input id="histSlider" type="text" data-provide="slider"
                                     data-slider-ticks="[1,2,3]" data-slider-ticks-labels='["Low", "Medium", "High"]' data-slider-min="1" data-slider-max="3"
                                     data-slider-step="1" data-slider-value="2" data-slider-tooltip="hide" />
