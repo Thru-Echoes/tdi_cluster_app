@@ -29,6 +29,26 @@ The work of Alice Kelly, Oliver Muellerklein, and Jenny Palomino produced a mean
 
 Finding a relationship between the above examples of park metrics and average total crime in each park was a complicated, windy process ... but ultimately resulted in this wonderful application of software development and natural resource and wildlife management across U.S. National Parks.
 
-## 4. Last words
+## 4. To do
+
+#### 4.1. Cluster Steps
+
+- run h-clustering on part III: *NRC* (**Natural Resource Crime**)
+- run h-clustering on part III: *PS* (**Public Safety**)
+- run h-clustering on part III as total of *NRC + PS*
+
+#### 4.2. Web Steps
+
+- change all "Part III" to "Other"
+- add labels to bottom crime profile boxes as subtitles
+- add labels under h1 in crime profile HTML page
+- add label col to crime profile table
+- change cluster numbers in data table
+- change footer to "Contact: Oliver C. Muellerklein || omuellerklein@berkeley.edu"
+- change Alice hyperlink to "alicebkelly.com"
+- change Jenny hyperlink to "" (*nothing for now*)
+- change crime profile pages so that part III is actually 2 columns **NRC, PS** as *"Other" Crime*
+
+## Last words
 
 "I just want to give a HUGE thank you to *Alice* and *Jenny* for my continual progress in research, education, and friendship. It has been incredible even just meeting you both - let alone working on such a great and meaningful project! So thank you." - *Oliver*   
