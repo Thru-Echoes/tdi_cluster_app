@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Park Service Site</title>
+    <title>Predict most JUST Capital Companies</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -50,17 +50,17 @@
     				<ul class="nav navbar-nav navbar-right">
     					<li><a href="./index.html">Home</a></li>
     					<li class="active"><a href="#">Web Tool</a></li>
-                        <li><a href="./roads_trails.html">Example Maps</a></li>
-                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Crime Profiles<b class="caret"></b></a>
+                        <li><a href="./sample_gis.html">Sample Spatial Maps (GIS)</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Cluster Profiles<b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <!--li class="active"><a href="#">Home</a></li-->
-                                <li><a href="./crime1.html">Crime Profile 1</a></li>
-                                <li><a href="./crime2.html">Crime Profile 2</a></li>
-                                <li><a href="./crime3.html">Crime Profile 3</a></li>
-                                <li><a href="./crime4.html">Crime Profile 4</a></li>
-                                <li><a href="./crime5.html">Crime Profile 5</a></li>
-                                <li><a href="./crime6.html">Crime Profile 6</a></li>
-                                <li><a href="./crime7.html">Crime Profile 7</a></li>
+                                <li><a href="./cluster1.html">Cluster Profile 1</a></li>
+                                <!--li><a href="./cluster2.html">Cluster Profile 2</a></li>
+                                <li><a href="./cluster3.html">Cluster Profile 3</a></li>
+                                <li><a href="./cluster4.html">Cluster Profile 4</a></li>
+                                <li><a href="./cluster5.html">Cluster Profile 5</a></li>
+                                <li><a href="./cluster6.html">Cluster Profile 6</a></li>
+                                <li><a href="./cluster7.html">Cluster Profile 7</a></li-->
                             </ul>
                         </li>
                     </ul>
@@ -76,33 +76,33 @@
                     <div class="col-md-2"></div>
                     <div class="col-md-8">
                         <br>
-                        <h2 style="text-align: center">Predict a Park's Crime Profile</h2>
+                        <h2 style="text-align: center">Predict a Company's JUST Profile</h2>
                         <br>
-                        <p style="text-align: center;">Enter metrics for a new park or an existing park that is changing. After entering values, click the <i>predict crime profile</i> button to see the likelihood that this new or changed park will belong to each of the seven Crime Profile clusters. The crime profile clusters of the 30 PWR park units are shown below for comparison.</p>
+                        <p style="text-align: center;">Enter metrics for a new company or an existing company that is changing management. After entering values, click the <i>predict cluster profile</i> button to see the likelihood that this new or changed company will belong to each of the *n* JUST Profile clusters. The company profile clusters of the 897 JUST Capital companies are shown below for comparison.</p>
                         <br>
                     </div>
                     <div class="col-md-2"></div>
                 </div>
                 <div class="row">
                     <div class="col-md-4 well">
-                        <h4 style="text-align: center;">Enter new park metrics: </h4>
+                        <h4 style="text-align: center;">Enter new company metrics: </h4>
                         <br>
-                        <p style="text-align: center;">Enter in metrics for a new park or what an existing park's metrics will be changed to. For this prototype we allow the following metrics to be entered:</p>
+                        <p style="text-align: center;">Enter in metrics for a new company or what an existing company's metrics will be changed to. For this prototype we allow the following metrics to be entered:</p>
                         <div style="height: 20px;"></div>
                         <form class="navbar-form navbar-left" role="search">
                             <div class="form-group">
-                                <h4>Rangers<sup>&dagger;</sup> <small>(<b>number</b>)</small></h4>
-                                <input type="text" class="form-control" placeholder="Number of Rangers" id="showRangers">
+                                <h4>Predictor 1<sup>&dagger;</sup> <small>(<b>number</b>)</small></h4>
+                                <input type="text" class="form-control" placeholder="Number for Predictor 1" id="showRangers">
                                 <div style="height: 12px;"></div>
 
-                                <h4>Seasonal Rangers<sup>&dagger;</sup> <small>(<b>number</b>)</small></h4>
-                                <input type="text" class="form-control" placeholder="Number of Seasonals" id="showSeasonals">
+                                <h4>Predictor 2<sup>&dagger;</sup> <small>(<b>number</b>)</small></h4>
+                                <input type="text" class="form-control" placeholder="Number of Predictor 2" id="showSeasonals">
                                 <div style="height: 12px;"></div>
                                 <!--input type="text" class="form-control" placeholder="Historic Grows" id="showGrows">
                                 <input type="text" class="form-control" placeholder="Density Roads" id="showRoads">
                                 <input type="text" class="form-control" placeholder="Density Trails" id="showTrails"-->
-                                <h4>Marijuana Grows</h4>
-                                <h4><small><b>Have any ever been discovered?</b></small></h4>
+                                <h4>Binary Predictor 3</h4>
+                                <h4><small><b>Is it a YES or a NO?</b></small></h4>
                                 <label class="radio-inline">
                                     <input type="radio" name="hist-radio" id="hist-yes">Yes
                                 </label>
@@ -111,7 +111,7 @@
                                 </label>
                                 <div style="height: 12px;"></div>
 
-                                <h4>Density of Roads<sup>&Dagger;</sup></h4>
+                                <!--h4>Density of Roads<sup>&Dagger;</sup></h4>
                                 <label class="radio-inline">
                                     <input type="radio" name="road-radio" id="road-low">Low
                                 </label>
@@ -133,15 +133,15 @@
                                 <label class="radio-inline">
                                     <input type="radio" name="trail-radio" id="trail-hi">High
                                 </label>
-                                <div style="height: 20px;"></div>
+                                <div style="height: 20px;"></div-->
                             </div>
                         </form>
                         <br>
-                        <p><sup>&dagger;</sup> <i>Rangers and seasonal rangers should each be the number at peak season</i></p>
+                        <p><sup>&dagger;</sup> <i>Predictor 1 and Predictor 2 should each be the numbers from JUST Captial data</i></p>
                         <br>
-                        <p><sup>&Dagger;</sup> <i>Average density of roads and trails each should either be <u>Low, Medium, or High</u><i>. <a href="./roads_trails.html">See real examples here.</a></p>
-                        <br>
-                        <button id="showPredict" class="btn btn-danger danger-specialL"><h4 style="text-align: center;">Predict Crime Profile</h4></button>
+                        <!--p><sup>&Dagger;</sup> <i>Check out sample spatial maps here (GIS) <a href="./sample_gis.html">See real examples here.</a></p>
+                        <br-->
+                        <button id="showPredict" class="btn btn-danger danger-specialL"><h4 style="text-align: center;">Predict JUST Captial Profile</h4></button>
                         <br>
                         <div class="row">
                             <div class="col-md-12">
@@ -173,65 +173,65 @@
                         </div>
                     </div>
                     <div class="col-md-8">
-                        <h4 style="text-align: center;">Predicted Likelihood of Crime Profile (<b>%</b>): </h4>
+                        <h4 style="text-align: center;">Predicted Likelihood of JUST Capital Profile (<b>%</b>): </h4>
                         <br>
                         <div class="row">
                             <div class="col-md-6">
-                                <h5 style="text-align: right;">Crime Profile 1</h5>
+                                <h5 style="text-align: right;">Cluster Profile 1</h5>
                                 <br>
-                                <h5 style="text-align: right;">Crime Profile 2</h5>
+                                <h5 style="text-align: right;">Cluster Profile 2</h5>
                                 <br>
-                                <h5 style="text-align: right;">Crime Profile 3</h5>
+                                <h5 style="text-align: right;">Cluster Profile 3</h5>
                                 <br>
-                                <h5 style="text-align: right;">Crime Profile 4</h5>
+                                <h5 style="text-align: right;">Cluster Profile 4</h5>
                                 <br>
-                                <h5 style="text-align: right;">Crime Profile 5</h5>
+                                <h5 style="text-align: right;">Cluster Profile 5</h5>
                                 <br>
-                                <h5 style="text-align: right;">Crime Profile 6</h5>
+                                <h5 style="text-align: right;">Cluster Profile 6</h5>
                                 <br>
-                                <h5 style="text-align: right;">Crime Profile 7</h5>
+                                <h5 style="text-align: right;">Cluster Profile 7</h5>
                                 <br>
                             </div>
                             <div class="col-md-6">
                                 <form class="navbar-form navbar-left" role="search">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Likelihood..." id="showCrime1">
+                                        <input type="text" class="form-control" placeholder="Likelihood..." id="showCluster1">
                                     </div>
                                 </form>
                                 <br>
                                 <form class="navbar-form navbar-left" role="search">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Likelihood..." id="showCrime2">
+                                        <input type="text" class="form-control" placeholder="Likelihood..." id="showCluster2">
                                     </div>
                                 </form>
                                 <br>
                                 <form class="navbar-form navbar-left" role="search">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Likelihood..." id="showCrime3">
+                                        <input type="text" class="form-control" placeholder="Likelihood..." id="showCluster3">
                                     </div>
                                 </form>
                                 <br>
                                 <form class="navbar-form navbar-left" role="search">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Likelihood..." id="showCrime4">
+                                        <input type="text" class="form-control" placeholder="Likelihood..." id="showCluster4">
                                     </div>
                                 </form>
                                 <br>
                                 <form class="navbar-form navbar-left" role="search">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Likelihood..." id="showCrime5">
+                                        <input type="text" class="form-control" placeholder="Likelihood..." id="showCluster5">
                                     </div>
                                 </form>
                                 <br>
                                 <form class="navbar-form navbar-left" role="search">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Likelihood..." id="showCrime6">
+                                        <input type="text" class="form-control" placeholder="Likelihood..." id="showCluster6">
                                     </div>
                                 </form>
                                 <br>
                                 <form class="navbar-form navbar-left" role="search">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Likelihood..." id="showCrime7">
+                                        <input type="text" class="form-control" placeholder="Likelihood..." id="showCluster7">
                                     </div>
                                 </form>
                                 <br>
@@ -241,7 +241,7 @@
                             <div class="col-md-4"></div>
                             <div class="col-md-6">
                                 <div style="height: 30px;"></div>
-                                <h4><strong>Relative crime cluster assignment likelihood:</strong></h4>
+                                <h4><strong>Relative JUST cluster assignment likelihood:</strong></h4>
                                 <br>
                                 <input type="text" class="form-control" id="large-input" name="hold_assign" placeholder="Crime profile assignment">
                                 <br>
@@ -262,20 +262,21 @@
     <div class="container-fluid background-crime">
         <div class="row">
             <div class="container">
-                <div class="row">
+                <div class="row" id="row-of-web-tool">
                     <div class="col-md-12">
                         <div class="med-split"></div>
-                        <h1 style="text-align: center;">Explore Park Metrics:</i></h1>
-                        <div class="row">
+                        <h1 style="text-align: center;">Explore JUST Capital Metrics:</i></h1>
+                        <div style="height: 50px"></div>
+                        <!--div class="row">
                             <div class="col-md-2"></div>
                             <div class="col-md-8">
-                                <h3 style="text-align: center;"><small><b>The total number of rangers is calculated by adding the number of rangers and the number of seasonal rangers at peak season. Thus, total number of rangers = number of rangers + number of seasonal rangers. For example, if a park has 5 rangers and 2 seasonal rangers, 7 total number of rangers would be shown in the table below.</b></small></h3>
+                                <h3 style="text-align: center;"><small><b>The total number of ... </b></small></h3>
                                 <br>
-                                <h3 style="text-align: center;"><small><b>The number of rangers and the number of seasonal rangers, as well as all other park metrics used in this web tool, are each a single value that represents the average of that parameter in a park across 10 years of data collection.</b></small></h3>
+                                <h3 style="text-align: center;"><small><b>The number of ... </b></small></h3>
                                 <div style="height: 30px;"></div>
                             </div>
                             <div class="col-md-2"></div>
-                        </div>
+                        </div-->
                         <div class="row">
                             <div class="col-md-3"></div>
                             <div class="col-md-3">
@@ -284,8 +285,8 @@
                                 </button>
                             </div>
                             <div class="col-md-3">
-                                <button class="btn btn-danger danger-specialR" onclick="window.location='roads_trails.html'">
-                                    <h4 style="text-align: center;">Examples of road and trail density</h4>
+                                <button class="btn btn-danger danger-specialR" onclick="window.location='https://nature.berkeley.edu/~omuellerklein/nps-tool/'">
+                                    <h4 style="text-align: center;">Sample Spatial Plots (GIS)</h4>
                                 </button>
                             </div>
                             <div class="col-md-3"></div>
@@ -296,11 +297,11 @@
                                 <thead>
                                     <tr class="click-row" data-href="/">
                                         <th data-field="cluster" data-sortable="true">Cluster</th>
-                                        <th data-field="park" data-sortable="true">Park</th>
-                                        <th data-field="rangers" data-sortable="true">Total Number of Rangers</th>
-                                        <th data-field="histgrows" data-sortable="true">Historic Grows</th>
-                                        <th data-field="maxdens_roads" data-sortable="true">Density of Roads</th>
-                                        <th data-field="maxdens_trails" data-sortable="true">Density of Trails</th>
+                                        <!--th data-field="park" data-sortable="true">Company</th-->
+                                        <th data-field="rangers" data-sortable="true">JUST 100</th>
+                                        <th data-field="histgrows" data-sortable="true">Predictor 1</th>
+                                        <th data-field="maxdens_roads" data-sortable="true">Predictor 2</th>
+                                        <th data-field="maxdens_trails" data-sortable="true">Predictor 3</th>
                                     </tr>
                                 </thead>
                             </table>
@@ -318,7 +319,7 @@
                     <div class="col-md-4"></div>
                     <div class="col-md-4">
                         <br>
-                        <h2 style="text-align: center">Predicted Crime Profile</h2>
+                        <h2 style="text-align: center">Predicted JUST Capital Profile</h2>
                         <div style="height: 40px"></div>
                         <!--form class="navbar-form" role="search">
                             <div class="form-group">
@@ -330,93 +331,88 @@
                 </div>
                 <div class="row">
                     <div class="col-md-3 boxUpper" style="text-align: center;" id="boxType1" data-toggle="tooltip" data-html="true" title="
-                    <h4>Breakdown of Crime Cluster</h4><br>
-                    <h6>Click to redirect to a breakdown of crime profile 1.</h6>
+                    <h4>Breakdown of JUST Company Cluster</h4><br>
+                    <h6>Click to redirect to a breakdown of cluster profile 1.</h6>
                     <br>
-                    " onclick="location.href='crime1.html'">
-                        <h3>Crime Profile 1</h3>
+                    " onclick="location.href='cluster1.html'">
+                        <h3>Cluster Profile 1</h3>
                         <br>
-                        <h4>CABR</h4>
-                        <h4>CHIS</h4>
-                        <h4>CRMO</h4>
-                        <h4>GRBA</h4>
-                        <h4>ORCA</h4>
+                        <h4>company1</h4>
+                        <h4>company2</h4>
+                        <h4>company3</h4>
+                        <h4>company4</h4>
                     </div>
                     <div class="col-md-3 boxUpper" style="text-align: center;" id="boxType2" data-toggle="tooltip" data-html="true" title="
-                    <h4>Breakdown of Crime Cluster</h4><br>
-                    <h6>Click to redirect to a breakdown of crime profile 2.</h6>
+                    <h4>Breakdown of JUST Company Cluster</h4><br>
+                    <h6>Click to redirect to a breakdown of cluster profile 2.</h6>
                     <br>
-                    " onclick="location.href='crime2.html'">
-                        <h3>Crime Profile 2</h3>
+                    " onclick="location.href='#'">
+                        <h3>Cluster Profile 2</h3>
                         <br>
-                        <h4>HAVO</h4>
-                        <h4>JOTR</h4>
-                        <h4>LARO</h4>
-                        <h4>REDW</h4>
-                        <h4>SEKI</h4>
+                        <h4>company1</h4>
+                        <h4>company2</h4>
+                        <h4>company3</h4>
+                        <h4>company4</h4>
                     </div>
                     <div class="col-md-3 boxUpper" style="text-align: center;" id="boxType3" data-toggle="tooltip" data-html="true" title="
-                    <h4>Breakdown of Crime Cluster</h4><br>
-                    <h6>Click to redirect to a breakdown of crime profile 3.</h6>
+                    <h4>Breakdown of JUST Company Cluster</h4><br>
+                    <h6>Click to redirect to a breakdown of cluster profile 3.</h6>
                     <br>
-                    " onclick="location.href='crime3.html'">
-                        <h3>Crime Profile 3</h3>
+                    " onclick="location.href='cluster3.html'">
+                        <h3>Cluster Profile 3</h3>
                         <br>
-                        <h4>DEVA</h4>
-                        <h4>LAVO</h4>
-                        <h4>NOCA</h4>
+                        <h4>company1</h4>
+                        <h4>company2</h4>
+                        <h4>company3</h4>
                     </div>
                     <div class="col-md-3 boxUpper" style="text-align: center;" id="boxType4" data-toggle="tooltip" data-html="true" title="
-                    <h4>Breakdown of Crime Cluster</h4><br>
-                    <h6>Click to redirect to a breakdown of crime profile 4.</h6>
+                    <h4>Breakdown of JUST Company Cluster</h4><br>
+                    <h6>Click to redirect to a breakdown of cluster profile 4.</h6>
                     <br>
-                    " onclick="location.href='crime4.html'">
-                        <h3>Crime Profile 4</h3>
+                    " onclick="location.href='cluster4.html'">
+                        <h3>Cluster Profile 4</h3>
                         <br>
-                        <h4>CRLA</h4>
-                        <h4>HALE</h4>
-                        <h4>KAHO</h4>
-                        <h4>KALA</h4>
-                        <h4>LABE</h4>
-                        <h4>PINN</h4>
-                        <h4>PUHO</h4>
+                        <h4>company1</h4>
+                        <h4>company2</h4>
+                        <h4>company3</h4>
+                        <h4>company4</h4>
+                        <h4>company5</h4>
+                        <h4>company6</h4>
+                        <h4>company7</h4>
                     </div>
                 </div>
                 <hr>
                 <div class="row">
                     <div class="col-md-4 boxLower" style="text-align: center;" id="boxType5" data-toggle="tooltip" data-html="true" title="
-                    <h4>Breakdown of Crime Cluster</h4><br>
-                    <h6>Click to redirect to a breakdown of crime profile 5.</h6>
+                    <h4>Breakdown of JUST Company Cluster</h4><br>
+                    <h6>Click to redirect to a breakdown of cluster profile 5.</h6>
                     <br>
-                    " onclick="location.href='crime5.html'">
-                        <h3>Crime Profile 5</h3>
+                    " onclick="location.href='cluster5.html'">
+                        <h3>Cluster Profile 5</h3>
                         <br>
-                        <h4>SAMO</h4>
-                        <h4>VALR</h4>
+                        <h4>company1</h4>
+                        <h4>company2</h4>
                     </div>
                     <div class="col-md-4 boxLower" style="text-align: center;" id="boxType6" data-toggle="tooltip" data-html="true" title="
-                    <h4>Breakdown of Crime Cluster</h4><br>
-                    <h6>Click to redirect to a breakdown of crime profile 6.</h6>
+                    <h4>Breakdown of JUST Company Cluster</h4><br>
+                    <h6>Click to redirect to a breakdown of cluster profile 6.</h6>
                     <br>
-                    " onclick="location.href='crime6.html'">
-                        <h3>Crime Profile 6</h3>
+                    " onclick="location.href='cluster6.html'">
+                        <h3>Cluster Profile 6</h3>
                         <br>
-                        <h4>GOGA</h4>
-                        <h4>LAKE</h4>
-                        <h4>OLYM</h4>
-                        <h4>WHIS</h4>
-                        <h4>YOSE</h4>
+                        <h4>company1</h4>
+                        <h4>company2</h4>
                     </div>
                     <div class="col-md-4 boxLower" style="text-align: center;" id="boxType7" data-toggle="tooltip" data-html="true" title="
-                    <h4>Breakdown of Crime Cluster</h4><br>
-                    <h6>Click to redirect to a breakdown of crime profile 7.</h6>
+                    <h4>Breakdown of JUST Company Cluster</h4><br>
+                    <h6>Click to redirect to a breakdown of cluster profile 7.</h6>
                     <br>
-                    " onclick="location.href='crime7.html'">
-                        <h3>Crime Profile 7</h3>
+                    " onclick="location.href='cluster7.html'">
+                        <h3>Cluster Profile 7</h3>
                         <br>
-                        <h4>MOJA</h4>
-                        <h4>MORA</h4>
-                        <h4>PORE</h4>
+                        <h4>company1</h4>
+                        <h4>company2</h4>
+                        <h4>company3</h4>
                     </div>
                 </div>
             </div>
@@ -448,10 +444,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <h4 class="footer-text"><a href="mailto:foo@berkeley.edu">Alice K.</a></h4>
-                    </div>
-                    <div class="col-md-6">
-                        <h4 class="footer-text"><a href="mailto:bar@berkeley.edu">Jenny P.</a></h4>
+                        <h4 class="footer-text"><a href="#">JUST Company</a></h4>
                     </div>
                 </div>
             </div>
@@ -468,7 +461,7 @@
 
 function setHref() {
 
-    var hrefFillers = ["crime1.html", "crime2.html", "crime3.html", "crime4.html", "crime5.html", "crime6.html", "crime7.html"];
+    var hrefFillers = ["cluster1.html", "cluster2.html", "cluster3.html", "cluster4.html", "cluster5.html", "cluster6.html", "cluster7.html"];
     var nextHref = hrefFillers[checkProfile];
 
     //window.location = nextHref;
@@ -481,7 +474,7 @@ function setHref() {
 
 function downloadCSV() {
 
-    window.open('csv/crime_data.csv');
+    window.open('csv/cluster_data.csv');
     return true;
 }
 

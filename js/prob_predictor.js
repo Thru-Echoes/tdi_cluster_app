@@ -65,7 +65,7 @@ function arr_decier( arr ) {
 
 }
 
-/* Predict crime profile likelihood click event */
+/* Predict cluster profile likelihood click event */
 var $showD = $('#showPredict');
 
 var setPredictor = $(function() {
@@ -82,7 +82,7 @@ var setPredictor = $(function() {
         var accumPoints = [0, 0, 0, 0, 0, 0, 0];
 
         // Real low and high range for variables
-        // Elements of arrays are each crime cluster profile
+        // Elements of arrays are each cluster cluster profile
         //   for the given variable, from cluster 1 to cluster 7.
         var realRangers = [[0.238452737, 6.961547263], [3.435340034, 30.56465997],
                             [9, 13], [2.227050827, 6.344377745],
@@ -112,7 +112,7 @@ var setPredictor = $(function() {
             var valueSeasonal = JSON.parse(document.getElementById('showSeasonals').value);
             var valueGrows, valueRoads, valueTrails;
 
-            if ( $('#hist-yes').is(':checked') ) {
+           /* if ( $('#hist-yes').is(':checked') ) {
                 valueGrows = "yes";
             } else if ( $('#hist-no').is(':checked') ) {
                 valueGrows = "no";
@@ -141,7 +141,7 @@ var setPredictor = $(function() {
             } else {
                 alert('Error in metrics - no entry for trail density.\n Please check an option.');
                 return true;
-            }
+            }*/
 
             var totRangers = valueRanger + valueSeasonal;
 
@@ -238,32 +238,32 @@ var setPredictor = $(function() {
         }
 
         try {
-            document.getElementById('showCrime1').value = exResults[0];
-            document.getElementById('showCrime2').value = exResults[1];
-            document.getElementById('showCrime3').value = exResults[2];
-            document.getElementById('showCrime4').value = exResults[3];
-            document.getElementById('showCrime5').value = exResults[4];
-            document.getElementById('showCrime6').value = exResults[5];
-            document.getElementById('showCrime7').value = exResults[6];
+            document.getElementById('showCluster1').value = exResults[0];
+            document.getElementById('showCluster2').value = exResults[1];
+            document.getElementById('showCluster3').value = exResults[2];
+            document.getElementById('showCluster4').value = exResults[3];
+            document.getElementById('showCluster5').value = exResults[4];
+            document.getElementById('showCluster6').value = exResults[5];
+            document.getElementById('showCluster7').value = exResults[6];
 
             var maxObj = calcMaxIdx(decPoints);
             var maxIdx = maxObj.maxIdx;
             var maxValue = maxObj.maxValue;
 
-            var nameFillers = ["Crime Profile 1 (" + maxValue + "%)",
-            "Crime Profile 2 (" + maxValue + "%)",
-            "Crime Profile 3 (" + maxValue + "%)",
-            "Crime Profile 4 (" + maxValue + "%)",
-            "Crime Profile 5 (" + maxValue + "%)",
-            "Crime Profile 6 (" + maxValue + "%)",
-            "Crime Profile 7 (" + maxValue + "%)"];
+            var nameFillers = ["Cluster Profile 1 (" + maxValue + "%)",
+            "Cluster Profile 2 (" + maxValue + "%)",
+            "Cluster Profile 3 (" + maxValue + "%)",
+            "Cluster Profile 4 (" + maxValue + "%)",
+            "Cluster Profile 5 (" + maxValue + "%)",
+            "Cluster Profile 6 (" + maxValue + "%)",
+            "Cluster Profile 7 (" + maxValue + "%)"];
 
-            var detailFillers = ["<h4 style='text-align: center;'>Details of crime profile 1</h4>", "<h4 style='text-align: center;'>Details of crime profile 2</h4>",
-            "<h4 style='text-align: center;'>Details of crime profile 3</h4>",
-            "<h4 style='text-align: center;'>Details of crime profile 4</h4>",
-            "<h4 style='text-align: center;'>Details of crime profile 5</h4>",
-            "<h4 style='text-align: center;'>Details of crime profile 6</h4>",
-            "<h4 style='text-align: center;'>Details of Crime Profile 7</h4>"];
+            var detailFillers = ["<h4 style='text-align: center;'>Details of cluster profile 1</h4>", "<h4 style='text-align: center;'>Details of cluster profile 2</h4>",
+            "<h4 style='text-align: center;'>Details of cluster profile 3</h4>",
+            "<h4 style='text-align: center;'>Details of cluster profile 4</h4>",
+            "<h4 style='text-align: center;'>Details of cluster profile 5</h4>",
+            "<h4 style='text-align: center;'>Details of cluster profile 6</h4>",
+            "<h4 style='text-align: center;'>Details of cluster Profile 7</h4>"];
 
             var largeTxt = nameFillers[maxIdx];
             var largeBtn = detailFillers[maxIdx];

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Park Service Site</title>
+    <title>Predict most JUST Capital Companies</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -37,24 +37,24 @@
     					<span class="icon-bar"></span>
     					<span class="icon-bar"></span>
     				</button>
-    				<a class="navbar-brand" href="#">Decision Support Tool</a>
+    				<a class="navbar-brand" href="#">Clustering JUST Capital</a>
     			</div>
 
                 <div class="navbar-collapse collapse">
     				<ul class="nav navbar-nav navbar-right">
     					<li class="active"><a href="#">Home</a></li>
-    					<li><a href="./web_tool.html">Web Tool</a></li>
-                        <li><a href="./roads_trails.html">Example Maps</a></li>
-                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Crime Profiles<b class="caret"></b></a>
+    					<li><a href="./web_tool.html">Clustering Tool</a></li>
+                        <li><a href="./sample_gis.html">Sample Spatial Maps (GIS)</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Cluster Profiles<b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <!--li class="active"><a href="#">Home</a></li-->
-                                <li><a href="./crime1.html">Crime Profile 1</a></li>
-                                <li><a href="./crime2.html">Crime Profile 2</a></li>
-                                <li><a href="./crime3.html">Crime Profile 3</a></li>
-                                <li><a href="./crime4.html">Crime Profile 4</a></li>
-                                <li><a href="./crime5.html">Crime Profile 5</a></li>
-                                <li><a href="./crime6.html">Crime Profile 6</a></li>
-                                <li><a href="./crime7.html">Crime Profile 7</a></li>
+                                <li><a href="./cluster1.html">Cluster Profile 1</a></li>
+                                <!--li><a href="./cluster2.html">Cluster Profile 2</a></li>
+                                <li><a href="./cluster3.html">Cluster Profile 3</a></li>
+                                <li><a href="./cluster4.html">Cluster Profile 4</a></li>
+                                <li><a href="./cluster5.html">Cluster Profile 5</a></li>
+                                <li><a href="./cluster6.html">Cluster Profile 6</a></li>
+                                <li><a href="./cluster7.html">Cluster Profile 7</a></li-->
                             </ul>
                         </li>
                     </ul>
@@ -72,8 +72,10 @@
                         <div style="height: 40px;"></div>
                         <h1 style="text-align: center; font-size: 600%">Web Tool Portal</h1>
                         <div style="height: 10px"></div>
-                        <h3 style="text-align: center;">Decision Support Tool & Geospatial Data and Maps </h3>
+                        <h3 style="text-align: center;">Clustering Tool for JUST Capital</h3>
                         <div style="height: 30px;"></div>
+                        <h4 style="text-align: center;">Using Random Forest and Entropy-Weighted Subspace Clustering</h4>
+                        <div style="height: 50px;"></div>
                         <!--h5 style="text-align: center;">This tool portal is a collaborative effort and a merger of web development, statistical analysis, and <i>National Park Service</i> data curation</h5>
                         <div style="height: 50px"></div-->
                     </div>
@@ -105,7 +107,7 @@
                     <div class="col-md-4"></div>
                     <div class="col-md-4">
                         <div style="height: 40px;"></div>
-                        <h2 class="header-color header-R"> Years of extensive data curation and intellectual concepts by <a href="mailto:abk@berkeley.edu" class="special-a link-R">Alice Kelly</a> and <a  href="mailto:jpalomino@berkeley.edu" class="special-a link-R">Jenny Palomino</a> </h2>
+                        <h2 class="header-color header-R"> Years of extensive data curation and intellectual concepts by JUST Capital to judge the **goodness** of companies</h2>
                         <div style="height: 40px;"></div>
                     </div>
                     <div class="col-md-2"></div>
@@ -125,19 +127,19 @@
                     <div class="col-md-4" style="text-align: center;">
                         <i class="fa fa-connectdevelop" style="font-size: 102px; color: black;"></i>
                         <div style="height: 12px;"></div>
-                        <h3 style="text-align: center;"><small><b>Analyze NPS Interactions</b></small></h3>
+                        <h3 style="text-align: center;"><small><b>Analyze JUST Companies Interactively</b></small></h3>
                         <div style="height: 20px;"></div>
                     </div>
                     <div class="col-md-4" style="text-align: center;">
                         <i class="fa fa-cogs" style="font-size: 102px; color: black;"></i>
                         <div style="height: 12px;"></div>
-                        <h3 style="text-align: center;"><small><b>Cluster NPS Units</b></small></h3>
+                        <h3 style="text-align: center;"><small><b>Cluster JUST Company Units</b></small></h3>
                         <div style="height: 20px;"></div>
                     </div>
                     <div class="col-md-4" style="text-align: center;">
                         <i class="fa fa-download" style="font-size: 102px; color: black;"></i>
                         <div style="height: 12px;"></div>
-                        <h3 style="text-align: center;"><small><b>Download NPS Data</b></small></h3>
+                        <h3 style="text-align: center;"><small><b>Download JUST Company Data</b></small></h3>
                         <div style="height: 20px;"></div>
                     </div>
                 </div>
@@ -145,7 +147,7 @@
                     <div class="col-md-3"></div>
                     <div class="col-md-6">
                         <div style="height: 20px;"></div>
-                        <h4 style="text-align: center;">Using the following links, you can either use the web tool to predict what crime cluster a <i>new</i> or <i>changing</i> park will belong to or view and download some example <i>Geographic Information Systems</i> (i.e. <b>GIS</b>) maps of road and trail densities.</h4>
+                        <h4 style="text-align: center;">Using the following links, you can either use the web tool to predict what company cluster a <i>new</i> or <i>changing</i> company will belong to or view and download some example <i>Geographic Information Systems</i> (i.e. <b>GIS</b>) maps of company data.</h4>
                     </div>
                     <div class="col-md-3"></div>
                     <div style="height: 30px;"></div>
@@ -155,14 +157,14 @@
                     <div class="col-md-3">
                         <div style="height: 40px;"></div>
                         <button class="btn btn-danger danger-specialL" onclick="window.location='web_tool.html'">
-                            <h3 style="text-align: center;">Crime Web Tool</h3>
+                            <h3 style="text-align: center;">Cluster Web Tool</h3>
                         </button>
                         <div style="height: 40px;"></div>
                     </div>
                     <div class="col-md-3">
                         <div style="height: 40px;"></div>
-                        <button class="btn btn-danger danger-specialR" onclick="window.location='roads_trails.html'">
-                            <h3 style="text-align: center;">Maps of roads and trails</h3>
+                        <button class="btn btn-danger danger-specialR" onclick="window.location='sample_gis.html'">
+                            <h3 style="text-align: center;">Example maps from Gov</h3>
                         </button>
                         <div style="height: 40px;"></div>
                     </div>
@@ -181,102 +183,100 @@
                     <div class="col-md-2"></div>
                     <div class="col-md-8">
                         <br>
-                        <h2 style="text-align: center">Predicted Crime Profile</h2>
+                        <h2 style="text-align: center">Predicted Cluster Profile</h2>
                         <br>
-                        <h4 style="text-align: center">Below there are <b>seven</b> clusters of the <i>30 Pacific West Region NPS units</i>. Clusters were calculated using an algorithm developed specifically for this data.</h4>
+                        <h4 style="text-align: center">Below there are <b>seven</b> clusters of the <i>30 example JUST Companies</i>. Clusters were calculated using an algorithm developed by Oliver Muellerklein.</h4>
                         <div style="height: 40px;"></div>
                     </div>
                     <div class="col-md-2"></div>
                 </div>
                 <div class="row">
                     <div class="col-md-3 boxUpper" style="text-align: center;" id="boxType1" data-toggle="tooltip" data-html="true" title="
-                    <h4>Breakdown of Crime Cluster</h4><br>
-                    <h6>Click to redirect to a breakdown of crime profile 1.</h6>
+                    <h4>Breakdown of Company Cluster</h4><br>
+                    <h6>Click to redirect to a breakdown of cluster profile 1.</h6>
                     <br>
-                    " onclick="location.href='crime1.html'">
-                        <h3>Crime Profile 1</h3>
+                    " onclick="location.href='cluster1.html'">
+                        <h3>Cluster Profile 1</h3>
                         <br>
-                        <h4>CABR</h4>
-                        <h4>CHIS</h4>
-                        <h4>CRMO</h4>
-                        <h4>GRBA</h4>
-                        <h4>ORCA</h4>
+                        <h4>company1</h4>
+                        <h4>company2</h4>
+                        <h4>company3</h4>
+                        <h4>company4</h4>
                     </div>
                     <div class="col-md-3 boxUpper" style="text-align: center;" id="boxType2" data-toggle="tooltip" data-html="true" title="
-                    <h4>Breakdown of Crime Cluster</h4><br>
-                    <h6>Click to redirect to a breakdown of crime profile 2.</h6>
+                    <h4>Breakdown of Company Cluster</h4><br>
+                    <h6>Click to redirect to a breakdown of cluster profile 2.</h6>
                     <br>
-                    " onclick="location.href='crime2.html'">
-                        <h3>Crime Profile 2</h3>
+                    " onclick="location.href='cluster2.html'">
+                        <h3>Cluster Profile 2</h3>
                         <br>
-                        <h4>HAVO</h4>
-                        <h4>JOTR</h4>
-                        <h4>LARO</h4>
-                        <h4>REDW</h4>
-                        <h4>SEKI</h4>
+                        <h4>company1</h4>
+                        <h4>company2</h4>
+                        <h4>company3</h4>
+                        <h4>company4</h4>
                     </div>
                     <div class="col-md-3 boxUpper" style="text-align: center;" id="boxType3" data-toggle="tooltip" data-html="true" title="
-                    <h4>Breakdown of Crime Cluster</h4><br>
-                    <h6>Click to redirect to a breakdown of crime profile 3.</h6>
+                    <h4>Breakdown of Company Cluster</h4><br>
+                    <h6>Click to redirect to a breakdown of cluster profile 3.</h6>
                     <br>
-                    " onclick="location.href='crime3.html'">
-                        <h3>Crime Profile 3</h3>
+                    " onclick="location.href='cluster3.html'">
+                        <h3>Cluster Profile 3</h3>
                         <br>
-                        <h4>DEVA</h4>
-                        <h4>LAVO</h4>
-                        <h4>NOCA</h4>
+                        <h4>company1</h4>
+                        <h4>company2</h4>
+                        <h4>company3</h4>
                     </div>
                     <div class="col-md-3 boxUpper" style="text-align: center;" id="boxType4" data-toggle="tooltip" data-html="true" title="
-                    <h4>Breakdown of Crime Cluster</h4><br>
-                    <h6>Click to redirect to a breakdown of crime profile 4.</h6>
+                    <h4>Breakdown of Company Cluster</h4><br>
+                    <h6>Click to redirect to a breakdown of cluster profile 4.</h6>
                     <br>
-                    " onclick="location.href='crime4.html'">
-                        <h3>Crime Profile 4</h3>
+                    " onclick="location.href='cluster4.html'">
+                        <h3>Cluster Profile 4</h3>
                         <br>
-                        <h4>CRLA</h4>
-                        <h4>HALE</h4>
-                        <h4>KAHO</h4>
-                        <h4>KALA</h4>
-                        <h4>LABE</h4>
-                        <h4>PINN</h4>
-                        <h4>PUHO</h4>
+                        <h4>company1</h4>
+                        <h4>company2</h4>
+                        <h4>company3</h4>
+                        <h4>company4</h4>
+                        <h4>company5</h4>
+                        <h4>company6</h4>
+                        <h4>company7</h4>
                     </div>
                 </div>
                 <hr>
                 <div class="row">
                     <div class="col-md-4 boxLower" style="text-align: center;" id="boxType5" data-toggle="tooltip" data-html="true" title="
-                    <h4>Breakdown of Crime Cluster</h4><br>
-                    <h6>Click to redirect to a breakdown of crime profile 5.</h6>
+                    <h4>Breakdown of Company Cluster</h4><br>
+                    <h6>Click to redirect to a breakdown of cluster profile 5.</h6>
                     <br>
-                    " onclick="location.href='crime5.html'">
-                        <h3>Crime Profile 5</h3>
+                    " onclick="location.href='cluster5.html'">
+                        <h3>Cluster Profile 5</h3>
                         <br>
-                        <h4>SAMO</h4>
-                        <h4>VALR</h4>
+                        <h4>company1</h4>
+                        <h4>company2</h4>
                     </div>
                     <div class="col-md-4 boxLower" style="text-align: center;" id="boxType6" data-toggle="tooltip" data-html="true" title="
-                    <h4>Breakdown of Crime Cluster</h4><br>
-                    <h6>Click to redirect to a breakdown of crime profile 6.</h6>
+                    <h4>Breakdown of Company Cluster</h4><br>
+                    <h6>Click to redirect to a breakdown of cluster profile 6.</h6>
                     <br>
-                    " onclick="location.href='crime6.html'">
-                        <h3>Crime Profile 6</h3>
+                    " onclick="location.href='cluster6.html'">
+                        <h3>Cluster Profile 6</h3>
                         <br>
-                        <h4>GOGA</h4>
-                        <h4>LAKE</h4>
-                        <h4>OLYM</h4>
-                        <h4>WHIS</h4>
-                        <h4>YOSE</h4>
+                        <h4>company1</h4>
+                        <h4>company2</h4>
+                        <h4>company3</h4>
+                        <h4>company4</h4>
+                        <h4>company5</h4>
                     </div>
                     <div class="col-md-4 boxLower" style="text-align: center;" id="boxType7" data-toggle="tooltip" data-html="true" title="
-                    <h4>Breakdown of Crime Cluster</h4><br>
-                    <h6>Click to redirect to a breakdown of crime profile 7.</h6>
+                    <h4>Breakdown of Company Cluster</h4><br>
+                    <h6>Click to redirect to a breakdown of cluster profile 7.</h6>
                     <br>
-                    " onclick="location.href='crime7.html'">
-                        <h3>Crime Profile 7</h3>
+                    " onclick="location.href='cluster7.html'">
+                        <h3>Cluster Profile 7</h3>
                         <br>
-                        <h4>MOJA</h4>
-                        <h4>MORA</h4>
-                        <h4>PORE</h4>
+                        <h4>company1</h4>
+                        <h4>company2</h4>
+                        <h4>company3</h4>
                     </div>
                 </div>
             </div>
@@ -308,10 +308,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <h4 class="footer-text"><a href="mailto:foo@berkeley.edu">Alice K.</a></h4>
-                    </div>
-                    <div class="col-md-6">
-                        <h4 class="footer-text"><a href="mailto:bar@berkeley.edu">Jenny P.</a></h4>
+                        <h4 class="footer-text"><a href="#">JUST Company</a></h4>
                     </div>
                 </div>
             </div>

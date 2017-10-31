@@ -134,16 +134,19 @@ body {
 }
 
 .background-special1 {
-    background-color: rgba(45, 96, 111, 0.99);
+    /*background-color: rgba(45, 96, 111, 0.99);*/
+    background-color: rgba(0, 0, 0, 0.81);
 }
 
 .background-special2 {
     /*background-color: rgba(91, 192, 222, 0.5);*/
-    background-color: rgba(78, 145, 240, 0.99);
+    /*background-color: rgba(78, 145, 240, 0.99);*/
+    background-image: url("img/grid_redd.png");
 }
 
 .background-crime {
-    background-color: rgba(78, 145, 240, 0.1);
+    /*background-color: rgba(78, 145, 240, 0.1);*/
+    background-image: url("img/grid_redd.png");
 }
 
 .header-L {
@@ -373,4 +376,10 @@ p {
 
 .xxxtra {
     height: 300px;
+}
+
+#row-of-web-tool {
+    margin-right: -40px;
+    margin-top: 250px;
+    background-color: rgba(255, 255, 255, 0.65);
 }

@@ -1,6 +1,9 @@
-# NPS Web Tool
+# Interactively predict JUST Company
 
-Tool for **National Park Service** to predict the crime clustering of a new or changing park based on a set of park metrics / parameters. The clustering algorithm and software development was aimed exclusively at the *30 Pacific West Region* NPS units. However, extending this approach to any national park seems feasible.
+**This is a web app I made for the Data Incubator semi-finalist challenge.** 
+
+
+Tool for exploring the relationships between JUST companies and how JUST scores are calculated based on specific variables / predictors. 
 
 ## 1. Overview
 
@@ -16,39 +19,4 @@ Due to potential concerns regarding backend (**e.g. server-side code + behavior 
 
 ## 2. Results of clustering algorithm
 
-We used a clustering method - currently being development as **TSEClustering** by Oliver Muellerklein at UC Berkeley - to group the *30 PWS* units into *7 crime clusters*. These clusters are based on several crime metrics, including the average amount of total Part I and II crimes in each park.
-
-## 3. Predicting new or changing parks
-
-The work of Alice Kelly, Oliver Muellerklein, and Jenny Palomino produced a means to find correlations, both linear and non-linear, between the average total crime and a series of park parameters. These parameters (**or 'park metrics'**) include, but are not limited to:
-
-- Number of rangers
-- Historic marijuana grows
-- Average road density (**Low, Medium, or High**)
-- And so much more!
-
-Finding a relationship between the above examples of park metrics and average total crime in each park was a complicated, windy process ... but ultimately resulted in this wonderful application of software development and natural resource and wildlife management across U.S. National Parks.
-
-## 4. To do
-
-#### 4.1. Cluster Steps
-
-- run h-clustering on part III: *NRC* (**Natural Resource Crime**)
-- run h-clustering on part III: *PS* (**Public Safety**)
-- run h-clustering on part III as total of *NRC + PS*
-
-#### 4.2. Web Steps
-
-- change all "Part III" to "Other"
-- add labels to bottom crime profile boxes as subtitles
-- add labels under h1 in crime profile HTML page
-- add label col to crime profile table
-- change cluster numbers in data table
-- change footer to "Contact: Oliver C. Muellerklein || omuellerklein@berkeley.edu"
-- change Alice hyperlink to "alicebkelly.com"
-- change Jenny hyperlink to "" (*nothing for now*)
-- change crime profile pages so that part III is actually 2 columns **NRC, PS** as *"Other" Crime*
-
-## Last words
-
-"I just want to give a HUGE thank you to *Alice* and *Jenny* for my continual progress in research, education, and friendship. It has been incredible even just meeting you both - let alone working on such a great and meaningful project! So thank you." - *Oliver*   
+We used a clustering method - currently being development as **TSEClustering** by Oliver Muellerklein at UC Berkeley.
