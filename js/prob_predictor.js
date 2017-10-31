@@ -108,20 +108,25 @@ var setPredictor = $(function() {
 
         try {
 
-            var valueRanger = JSON.parse(document.getElementById('showRangers').value);
-            var valueSeasonal = JSON.parse(document.getElementById('showSeasonals').value);
+            //var valueRanger = JSON.parse(document.getElementById('showRangers').value);
+            //var valueSeasonal = JSON.parse(document.getElementById('showSeasonals').value);
+            var valueRanger, valueSeasonal; 
             var valueGrows, valueRoads, valueTrails;
 
-           /* if ( $('#hist-yes').is(':checked') ) {
+            //debugger; 
+
+            if ( $('#hist-yes').is(':checked') ) {
                 valueGrows = "yes";
+
             } else if ( $('#hist-no').is(':checked') ) {
                 valueGrows = "no";
+
             } else {
                 alert('Error in metrics - no entry for historic grows.\n Please check yes or no.');
                 return true;
             }
 
-            if ( $('#road-low').is(':checked') ) {
+            /*if ( $('#road-low').is(':checked') ) {
                 valueRoads = 0;
             } else if ( $('#road-med').is(':checked') ) {
                 valueRoads = 1;
@@ -143,11 +148,11 @@ var setPredictor = $(function() {
                 return true;
             }*/
 
-            var totRangers = valueRanger + valueSeasonal;
+            //var totRangers = valueRanger + valueSeasonal;
 
             /* Test low and high range of total rangers */
 
-            if ((totRangers >= realRangers[0][0]) && (totRangers <= realRangers[0][1])) {
+            /*if ((totRangers >= realRangers[0][0]) && (totRangers <= realRangers[0][1])) {
                 accumPoints[0] += 1;
             }
 
@@ -173,31 +178,31 @@ var setPredictor = $(function() {
 
             if ((totRangers >= realRangers[6][0]) && (totRangers <= realRangers[6][1])) {
                 accumPoints[6] += 1;
-            }
+            }*/
 
             /* Test historic grows */
 
             if ( valueGrows == "yes" ) {
-                //exResults = exResults2;
+                exResults = exResults2;
 
-                accumPoints[0] += realGrows[0];
+                /*accumPoints[0] += realGrows[0];
                 accumPoints[1] += realGrows[1];
                 accumPoints[2] += realGrows[2];
                 accumPoints[3] += realGrows[3];
                 accumPoints[4] += realGrows[4];
                 accumPoints[5] += realGrows[5];
-                accumPoints[6] += realGrows[6];
+                accumPoints[6] += realGrows[6];*/
             } else {
                 if ( valueGrows == "no" ) {
-                    //exResults = exResults1;
+                    exResults = exResults1;
 
-                    accumPoints[0] += (1 - realGrows[0]);
+                    /*accumPoints[0] += (1 - realGrows[0]);
                     accumPoints[1] += (1 - realGrows[1]);
                     accumPoints[2] += (1 - realGrows[2]);
                     accumPoints[3] += (1 - realGrows[3]);
                     accumPoints[4] += (1 - realGrows[4]);
                     accumPoints[5] += (1 - realGrows[5]);
-                    accumPoints[6] += (1 - realGrows[6]);
+                    accumPoints[6] += (1 - realGrows[6]);*/
                 } else {
                     throw "bad value for grows. Try with either 'yes' or 'no'.";
                 }
@@ -205,29 +210,29 @@ var setPredictor = $(function() {
 
             /* Add ratio points for road densities */
 
-            accumPoints[0] += realRoads[0][valueRoads];
+            /*accumPoints[0] += realRoads[0][valueRoads];
             accumPoints[1] += realRoads[1][valueRoads];
             accumPoints[2] += realRoads[2][valueRoads];
             accumPoints[3] += realRoads[3][valueRoads];
             accumPoints[4] += realRoads[4][valueRoads];
             accumPoints[5] += realRoads[5][valueRoads];
-            accumPoints[6] += realRoads[6][valueRoads];
+            accumPoints[6] += realRoads[6][valueRoads];*/
 
             /* Add ratio points for trail densities */
 
-            accumPoints[0] += realTrails[0][valueTrails];
+            /*accumPoints[0] += realTrails[0][valueTrails];
             accumPoints[1] += realTrails[1][valueTrails];
             accumPoints[2] += realTrails[2][valueTrails];
             accumPoints[3] += realTrails[3][valueTrails];
             accumPoints[4] += realTrails[4][valueTrails];
             accumPoints[5] += realTrails[5][valueTrails];
-            accumPoints[6] += realTrails[6][valueTrails];
+            accumPoints[6] += realTrails[6][valueTrails];*/
 
             //exResults = accumPoints;
 
-            var scaledPoints = arr_scaler(accumPoints);
+            /*var scaledPoints = arr_scaler(accumPoints);
             var decPoints = arr_decier(scaledPoints);
-            exResults = decPoints;
+            exResults = decPoints;*/
 
         } catch( err ) {
 
@@ -246,7 +251,7 @@ var setPredictor = $(function() {
             document.getElementById('showCluster6').value = exResults[5];
             document.getElementById('showCluster7').value = exResults[6];
 
-            var maxObj = calcMaxIdx(decPoints);
+            /*var maxObj = calcMaxIdx(decPoints);
             var maxIdx = maxObj.maxIdx;
             var maxValue = maxObj.maxValue;
 
@@ -272,7 +277,7 @@ var setPredictor = $(function() {
 
             document.getElementById('large-input').value = largeTxt;
             document.getElementById('large-input-btn').innerHTML = largeBtn;
-            document.getElementById('show-prob-row').style.display = "block";
+            document.getElementById('show-prob-row').style.display = "block";*/
 
         } catch( err )  {
             alert('\nError in calculating likelihoods.\nPlease try again.\n');

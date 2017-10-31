@@ -242,7 +242,8 @@ body {
 
 .navbar-default {
     /*background-color: rgba(78, 140, 240, 0.2);*/
-    background-color: rgba(205, 251, 232, 0.98);
+    /*background-color: rgba(205, 251, 232, 0.98);*/
+    background-color: rgba(255, 255, 255, 0.8);
     border-color: rgba(45, 96, 111, 0.8);
 }
 

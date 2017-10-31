@@ -78,6 +78,8 @@ var setPredictor = $(function() {
         var exResults2 = [0.0, 0.4, 0.0, 0.1, 0.1, 0.3, 0.1];
         var exResults, message;
 
+        debugger; 
+
         // Accumulate points as game for new park cluster assignment
         var accumPoints = [0, 0, 0, 0, 0, 0, 0];
 
@@ -113,7 +115,7 @@ var setPredictor = $(function() {
                 return true;
             }
 
-            if ( $('#road-low').is(':checked') ) {
+            /*if ( $('#road-low').is(':checked') ) {
                 valueRoads = 0;
             } else if ( $('#road-med').is(':checked') ) {
                 valueRoads = 1;
@@ -133,7 +135,7 @@ var setPredictor = $(function() {
             } else {
                 alert('Error in metrics - no entry for trail density.\n Please check an option.');
                 return true;
-            }
+            }*/
 
             var totRangers = valueRanger + valueSeasonal;
 
@@ -146,12 +148,13 @@ var setPredictor = $(function() {
             /* Test historic grows */
 
             if ( valueGrows == "yes" ) {
-                //exResults = exResults2;
+                exResults = exResults2;
 
-                accumPoints[0] += realGrows[0];
+                //accumPoints[0] += realGrows[0];
             } else {
                 if ( valueGrows == "no" ) {
-                    accumPoints[0] += (1 - realGrows[0]);
+                    exResults = exResults1;
+                    //accumPoints[0] += (1 - realGrows[0]);
                 } else {
                     throw "bad value for grows. Try with either 'yes' or 'no'.";
                 }
@@ -159,17 +162,17 @@ var setPredictor = $(function() {
 
             /* Add ratio points for road densities */
 
-            accumPoints[0] += realRoads[0][valueRoads];
+            //accumPoints[0] += realRoads[0][valueRoads];
 
             /* Add ratio points for trail densities */
 
-            accumPoints[0] += realTrails[0][valueTrails];
+            //accumPoints[0] += realTrails[0][valueTrails];
 
             //exResults = accumPoints;
 
-            var scaledPoints = arr_scaler(accumPoints);
-            var decPoints = arr_decier(scaledPoints);
-            exResults = decPoints;
+            //var scaledPoints = arr_scaler(accumPoints);
+            //var decPoints = arr_decier(scaledPoints);
+            //exResults = decPoints;
 
         } catch( err ) {
 
